@@ -15,6 +15,10 @@
   --buttonColor:black;
 }
 
+body *{
+	transition: 0.3s;
+}
+
 html,
 body {
   padding: 0;
