@@ -10,7 +10,7 @@
   --themeDotBorder: #24292e;
 
   --previewBg: rgb(251, 249, 243, 0.8);
-  --prevewShadow: #f0ead6;
+  --previewShadow: #f0ead6;
 
   --buttonColor:black;
 }
@@ -219,7 +219,7 @@ ul {
 }
 
 #preview-shadow {
-  background-color: var(--prevewShadow);
+  background-color: var(--previewShadow);
   width: 300px;
   height: 180px;
   padding-left: 30px;
@@ -269,7 +269,7 @@ ul {
 #skills {
   display: flex;
   justify-content: space-evenly;
-  background-color: var(--prevewShadow);
+  background-color: var(--previewShadow);
 }
 
 #social_img {
