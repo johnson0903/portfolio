@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lee Chia-Cheng</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <section class="section1">
+      <div class="container">
+        <div class="greeting-wrapper">
+          <h1>Hi, I'm Johnson Lee</h1>
+        </div>
+        <div class="intro-wrapper">
+          <div class="nav-wrapper">
+            <div class="dots-wrapper">
+              <div id="dot-1" class="browser-dot"></div>
+              <div id="dot-2" class="browser-dot"></div>
+              <div id="dot-3" class="browser-dot"></div>
+            </div>
+            <ul id="navigation">
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="left-column">
+            <img
+              id="profile_pic"
+              src="img/profile.jpg"
+              alt="staketboard game"
+            />
+            <h5 style="text-align: center; line-height: 0">
+              Personalize Theme
+            </h5>
+            <div id="theme-options-wrapper">
+              <div id="light-mode" class="theme-dot"></div>
+              <div id="blue-mode" class="theme-dot"></div>
+              <div id="green-mode" class="theme-dot"></div>
+            </div>
+            <p id="settings-note">
+              *Theme settings will be saved for <br />your next visit
+            </p>
+          </div>
+
+          <div class="right-column">
+            <div id="preview-shadow">
+              <div id="preview">
+                <div id="corner-tl" class="corner"></div>
+                <div id="corner-tr" class="corner"></div>
+
+                <h3>About me</h3>
+                <p>
+                  會用一點點的Unity，會寫一點點的ios
+                  App。努力成為一名前端工程師的路上有滑板和吉他陪伴
+                </p>
+                <div id="corner-bl" class="corner"></div>
+                <div id="corner-br" class="corner"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section2">
+      <div class="container">
+        <div class="about-wrapper">
+          <div class="about-me">
+            <h4>More About Me</h4>
+            <p>
+              我是李嘉晟，畢業於國立台北科技大學資工系，曾開發過 ios
+              手機程式、Unity 2D及3D遊戲，當過 Unity
+              虛擬實境課程助教，平時喜歡在網路上自我學習前端開發技能，目前熟悉使用
+              Vue.js 生態進行前端工程開發，並希望朝前端工程師的方向前進。
+            </p>
+            <p>
+              除了喜歡自學程式技能之外，我也培養彈奏吉他、玩滑板等休閒活動，我認為這類型的活動需要深度工作力，投入大量且專心的時間才能夠有所收穫，與寫程式相當類似，我喜歡這類需要專心且具有挑戰性的事物，並從中獲得成就感。
+            </p>
+            <hr />
+            <h4>Top Expertise</h4>
+            <p>
+              Rerum laudantium pariatur temporibus sit maxime dolorum cupiditate
+              asperiores. Sequi, ipsam:
+              <a target="_blank" href="./resume.pdf">Download Resume</a>
+            </p>
+            <div id="skills">
+              <ul>
+                <li>Javascript</li>
+                <li>Unity</li>
+                <li>ios</li>
+                <li>Heroku</li>
+                <li>Git</li>
+              </ul>
+              <ul>
+                <li>Vue.js</li>
+                <li>C#</li>
+                <li>Swift</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <img id="social_img" src="img/skateboard-game.png" alt="" />
+            <h3>Find me on Facebook & Instagram</h3>
+            <a href="#">Facebook: @johnson0903</a>
+            <br />
+            <a href="#">Instagram: @johnson20107</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section1" id="app">
+      <div class="container">
+        <h3 style="text-align: center">Some of my past projects</h3>
+        <div class="projects-wrapper">
+          <div class="project" v-for="project in projects">
+            <img class="thumbnail" :src="project.img" alt="project.img" />
+            <div class="project-preview">
+              <h6 class="project-title">{{project.title}}</h6>
+              <p class="project-intro">{{project.intro}}</p>
+              <a :href="project.link">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section2">
+      <div class="container">Contact</div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+      var app = new Vue({
+        el: '#app',
+        data: {
+          projects: [
+            {
+              img: 'img/elderly.png',
+              title: 'ICU老人防走失系統',
+              intro: 'I See You 是經過完整問題發想、疊待測試和系統改善等開發流程的服務設計專案，宗旨是要讓家屬能夠安心帶失智家屬外出',
+              link: 'https://medium.com/@travelama0000'
+            },
+            {
+              img: 'img/budget_app.png',
+              title: 'Vue簡易記帳App',
+              intro: '練習使用vuejs，vue-router，vuex和Vuetify開發的一款記帳App，具有新增或編輯支出、查看各類支出等等功能',
+              link: 'https://vue-budget.herokuapp.com/budget'
+            },
+            {
+              img: 'img/skateboard_game.jpg',
+              title: '滑板小遊戲',
+              intro: '在一學期的課堂內學會使用Maya建模、設定骨架、製作動畫，並匯入Unity中製作出一個小型滑板模擬遊戲',
+              link: './SkateboardGame/index.html'
+            }
+          ]
+        }
+      })
+    </script>
+  </body>
+</html>
